@@ -1,0 +1,108 @@
+$background: #003049;
+$text: #fdf0d5 !important;
+$texthover: #669bbc !important;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=PT+Serif&display=swap');
+
+* {
+  background-color: $background;
+  color: $text;
+  text-decoration-line: none !important;
+  font-family: 'PT Serif', serif;
+}
+
+.intro {
+  font-size: 7.5vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+a.navLink {
+  position: relative;
+  color: $text;
+
+  &:hover {
+    border-bottom: solid 1px white !important;
+
+  }
+}
+
+.devAcadLink:hover {
+  text-decoration: underline !important;
+}
+
+
+
+
+.navLink {
+  margin: 0 0.7rem 0 0.7rem;
+  text-decoration-line: none;
+  background-color: unset;
+  // font-family: "Kanit", Serif;
+  font-size: 1.3rem;
+}
+
+
+.navbar {
+  background-color: unset;
+}
+
+.navbar-nav {
+  background-color: unset;
+}
+
+.container {
+  background-color: unset;
+  display: block;
+}
+
+.homePage {
+  place-content: center;
+  display: block;
+}
+
+.homeBody {
+  margin: 2.5rem 0 0 0;
+  display: flex;
+  place-content: center space-between;
+  flex-direction: row;
+  font-size: 0;
+
+  .homeBody1 {
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .homeBody1TextBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 0 0 0 0;
+  }
+
+  .homeBody2 {
+    font-size: 1.1rem;
+    margin: 1.75rem 1.5rem 0 0;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+.contactBox {
+  display: flex;
+  margin: 0;
+  place-content: center;
+}
+
+.homeBodyImg {
+  margin: 0 0.3rem 0 0.3rem;
+
+  &.pageLink {
+    align-content: center;
+  }
+}

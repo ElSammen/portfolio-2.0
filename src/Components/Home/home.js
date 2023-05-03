@@ -5,7 +5,10 @@ import Typewriter from 'typewriter-effect';
 
 function home() {
   return (
+    <>
+    
     <Container className='homePage'>
+      
       <div className="intro">
         <Typewriter
           onInit={(typewriter) => {
@@ -23,7 +26,8 @@ function home() {
       <div className="homeBody d-flex">
         <div className="homeBody1">
           <div className="homeBody1TextBox">
-            <p className="homeBody1Text">A recent graduate from <a className="devAcadLink" href="https://thedeveloperacademy.com/"><em>The Developer Academy</em></a>'s Full Stack Web Developer bootcamp, I've a keen interest in the production of clean, functional websites, with crisp easily maintained code.</p>
+            <p className="homeBody1Text">A recent fledgling from <a className="devAcadLink" href="https://thedeveloperacademy.com/"><em>The Developer Academy</em></a>'s nest (Full Stack Software Developer bootcamp).
+             I'm looking to take my first steps into an exciting new industry and career.</p>
             <p className="homeBody1Text"></p>
             <p className="homeBody1Text">Check me out below or get in touch and lets see how we can help eachother.</p>
           </div>
@@ -41,6 +45,8 @@ function home() {
         </div>
       </div>
     </Container>
+    
+    </>
   )
 }
 

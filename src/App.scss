@@ -1,13 +1,26 @@
-$background: #003049;
+$background: #4681e7;
 $text: #fdf0d5 !important;
 $texthover: #669bbc !important;
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spectral&display=swap');
 
 * {
-  background-color: $background;
   color: $text;
   text-decoration-line: none !important;
   font-family: 'PT Serif', serif;
+}
+
+body {
+  background-color: $background !important;
+}
+
+.hidden {
+  display: none;
+}
+
+#tsparticles {
+  z-index: -1;
+  position: fixed;
+  
 }
 
 .intro {
@@ -20,15 +33,15 @@ $texthover: #669bbc !important;
 a.navLink {
   position: relative;
   color: $text;
-
+  font-family: 'Spectral';
   &:hover {
-    border-bottom: solid 1px white !important;
-
+    text-decoration: underline !important;
   }
 }
 
 .devAcadLink:hover {
   text-decoration: underline !important;
+  
 }
 
 
@@ -45,6 +58,7 @@ a.navLink {
 
 .navbar {
   background-color: unset;
+  height: 2.5rem !important;
 }
 
 .navbar-nav {
@@ -66,6 +80,7 @@ a.navLink {
   display: flex;
   place-content: center space-between;
   flex-direction: row;
+  flex-wrap: wrap;
   font-size: 0;
 
   .homeBody1 {
@@ -105,4 +120,122 @@ a.navLink {
   &.pageLink {
     align-content: center;
   }
+}
+
+.projectBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+  margin: 0 0 0 0;
+}
+
+.projectCard {
+  max-width: 400px;
+  min-height: 250px;
+  margin: 2rem auto auto auto;
+  background-color: #465266 !important;
+}
+
+.projectCard.hidden {
+  display: none;
+}
+
+.projectCard.furtherInfo {
+min-width: 50vw;
+
+}
+
+.cardButton {
+  position: absolute;
+  right: 1rem;
+}
+
+.cardText {
+  margin: 1.2rem 0 0 0;
+}
+
+.furtherIntro {
+  display: none;
+}
+
+.furtherInfo {
+  display: inline-block;
+}
+
+.imgBox {
+  display: flex;
+  margin: 0.5rem auto auto auto;
+  place-content: center;
+}
+
+.displayNone {
+  display: none;
+}
+
+.wavesBG {
+ z-index: -2;
+ position: absolute;
+}
+
+.herdousel {
+  margin-bottom: 15px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: rgba(0, 0, 0, 0.416);
+  border-radius: 50%;
+}
+
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+  background-color: rgba(0, 0, 0, 0.616);
+  width: 35px;
+  height: 35px;
+}
+
+.cvPage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+  gap: 1rem;
+}
+
+.prevButton, .nextButton, .returnButton {
+  background-color: unset;
+  color: $text;
+  font-size: 1.5rem;
+  font-weight: 700;
+  &:hover {
+    color: $texthover;
+    cursor: pointer;
+  }
+}
+
+.prevButton {
+  left: 20rem;
+}
+
+.nextButton {
+  right: 22rem;
+}
+
+.returnButton {
+  right: 20.5rem;
+}
+
+.downloadButton {
+  position: absolute;
+  top: 2.5rem;
+  left: 1.5rem;
+  &:hover {
+    color: $texthover;
+    cursor: pointer;
+  }
+}
+
+@media screen {
+  
 }

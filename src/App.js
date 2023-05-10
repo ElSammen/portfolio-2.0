@@ -14,10 +14,9 @@ function App() {
         <Navbar /> 
         
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/CV" element={<CV />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/CV" element={<CV />} />
         </Routes>
         
         <Particle />

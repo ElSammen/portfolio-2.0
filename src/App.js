@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/home";
 import Projects from './Components/Projects/Projects';
 import CV from './Components/CV/CV';
@@ -12,12 +12,10 @@ function App() {
   return (
     <Router>
         <Navbar /> 
-        
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/CV" element={<CV />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/CV" element={<CV />} />
         </Routes>
         
         <Particle />

@@ -20,7 +20,7 @@ function ControlledCarousel() {
           src={rating}
           alt="First slide"
         />
-        <p>Initial page on app / website opening.</p>
+        <p className="carText">Initial page on app / website opening.</p>
         <br />
       </Carousel.Item>
       <Carousel.Item>
@@ -30,7 +30,7 @@ function ControlledCarousel() {
           alt="Second slide"
         />
 
-        <p>Dummy data entered for display purposes, accepts any link in image url but we primarily used unsplash royalty free images.</p>
+        <p className="carText">Dummy data entered for display purposes, accepts any link in image url but we primarily used unsplash royalty free images.</p>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -38,7 +38,7 @@ function ControlledCarousel() {
           src={rating3}
           alt="Third slide"
         />
-        <p>Once a post is made a toastr notification pops up in the top right corner and the post is automatically added to the top of the feed below.</p>
+        <p className="carText">Once a post is made a toastr notification pops up in the top right corner and the post is automatically added to the top of the feed below.</p>
       </Carousel.Item>
     </Carousel>
   );

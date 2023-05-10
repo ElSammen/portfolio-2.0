@@ -23,7 +23,7 @@ function ControlledCarousel() {
         {/* <Carousel.Caption>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption> */}
-        <p>Initial page you're presented with the various cards.</p>
+        <p className="carText">Initial page you're presented with the various cards.</p>
         <br />
       </Carousel.Item>
       <Carousel.Item>
@@ -35,7 +35,7 @@ function ControlledCarousel() {
         {/* <Carousel.Caption>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption> */}
-        <p>Showcasing the location search feature as well as hovering on a card showing the more detailed information.</p>
+        <p className="carText">Showcasing the location search feature as well as hovering on a card showing the more detailed information.</p>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -43,7 +43,7 @@ function ControlledCarousel() {
           src={weatherapp3}
           alt="Third slide"
         />
-        <p>Once a card is clicked you're taken to a 24 hour timeline of that day with a little more information.</p>
+        <p className="carText">Once a card is clicked you're taken to a 24 hour timeline of that day with a little more information.</p>
         {/* <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -55,7 +55,7 @@ function ControlledCarousel() {
           src={weatherapp4}
           alt="Fourth slide"
         />
-        <p>Displaying the charts we used.</p>
+        <p className="carText">Displaying the charts we used.</p>
 {/* 
         <Carousel.Caption>
           <h3>Third slide label</h3>

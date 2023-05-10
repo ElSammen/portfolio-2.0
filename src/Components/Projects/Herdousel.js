@@ -23,7 +23,7 @@ function ControlledCarousel() {
         {/* <Carousel.Caption>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption> */}
-        <p>Our login / registration page. We used MongoDB to store user login details and then node and express to query that data and pass it to the frontend for user validation.</p>
+        <p className="carText">Our login / registration page. We used MongoDB to store user login details and then node and express to query that data and pass it to the frontend for user validation.</p>
         <br />
       </Carousel.Item>
       <Carousel.Item>
@@ -35,10 +35,10 @@ function ControlledCarousel() {
         {/* <Carousel.Caption>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption> */}
-        <p>The profile page allows users to set their profile picture, username, and select genre tags for later searching the Spotify API.
-           We incorporated genre seeds used by Spotify for creating recommended song suggestions to provide relevant tag suggestions for users.
-           The searchbox incorporated an autocomplete feature preloaded with those genre seeds and as you can see in the image would allow us to send over multiple different</p>
-      </Carousel.Item>
+        <p className="carText">The profile page allows users to set their profile picture, username, and select genre tags for later searching the Spotify API.
+           We used the official genre seeds used by Spotify when providing music suggestions.
+           The searchbox incorporated an autocomplete feature preloaded with those genre seeds and would allow us to send over multiple different options to the backend server.</p>
+      <br/></Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"

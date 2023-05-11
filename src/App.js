@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/home";
 import Projects from './Components/Projects/Projects';
 import CV from './Components/CV/CV';
@@ -12,7 +12,6 @@ function App() {
   return (
     <Router>
         <Navbar /> 
-        
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/projects" element={<Projects />} />

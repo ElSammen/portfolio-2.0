@@ -1,5 +1,5 @@
 $background: #062863;
-$backgroundhover: #669bbc !important;
+$backgroundhover: #669bbc;
 $text: rgb(253, 240, 213) !important;
 $texthover: #669bbc !important;
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spectral&display=swap');
@@ -76,12 +76,14 @@ a.navLink {
   &:hover {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.484);
     animation: shake 0.15s ease-in-out;
+    color: $texthover;
   }
 }
 
 .devAcadLink:hover {
   text-decoration: underline !important;
-
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.484);
+  color: $texthover;
 }
 
 @keyframes shake {
@@ -135,6 +137,14 @@ a.navLink {
   display: block;
 }
 
+.cvEmbed {
+  display: flex;
+  place-content: center;
+  margin: 0 0 0 0;
+  width: 100vw;
+  height: 95vh;
+}
+
 .homePage {
   place-content: center;
   display: block;
@@ -169,7 +179,7 @@ a.navLink {
 
   .homeBody2 {
     font-size: 1.1rem;
-    margin: 1.75rem 1.5rem 0 0;
+    margin: 1.75rem 1.5rem 1.5rem 0;
     max-width: 50%;
     display: block;
     text-align: center;
@@ -321,6 +331,7 @@ a.navLink {
   border-radius: 5px;
   font-size: 1.1rem;
   background-color: $background;
+  width: auto;
   &:hover {
     background-color: $backgroundhover;
     cursor: pointer;
@@ -349,6 +360,7 @@ a.navLink {
     position: relative;
     font-size: 1.1rem;
     margin: auto;
+    margin-bottom: 50px;
     max-width: 50%;
     display: block;
     text-align: center;
@@ -382,3 +394,4 @@ a.navLink {
     top: 10%;
   }
 }
+

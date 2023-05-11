@@ -1,29 +1,25 @@
-import React, { useState } from 'react'
-import { Container, div } from 'react-bootstrap'
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+import React, { useState, useEffect } from 'react'
+import { Container } from 'react-bootstrap'
 import CV from './CV.pdf';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
+import cv1 from './Images/cv1.png';
+import cv2 from './Images/cv2.png';
+import cv3 from './Images/cv3.png'; 
 
 function MeCV() {
 
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+
 
   return (
     <Container className="cvPage">
-      {(onDocumentLoadSuccess ? <div> <a download={CV} className="downloadButton">Care to download a copy?</a></div> : null)}
+      <div> <a href={require('./CV.pdf')} download={CV} className="downloadButton">Care to download a copy?</a></div>
       {(pageNumber != 1 ? <div className="prevButton" onClick={() => setPageNumber(pageNumber - 1)}>⇦ Previous</div> : null)}
-      <Document file={CV} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} renderTextLayer={false} />
-      </ Document>
+      {(pageNumber === 1 ? <img src={cv1} className="cvImage" /> : null)}
+      {(pageNumber === 2 ? <img src={cv2} className="cvImage" /> : null)}
+      {(pageNumber === 3 ? <img src={cv3} className="cvImage" /> : null)}
       {(pageNumber !== 3 ? <div className="nextButton" onClick={() => setPageNumber(pageNumber + 1)}>Next ⇨</div> : <div className="returnButton "onClick={() => setPageNumber(1)}>Return ⟲</div>)}
-
     </Container>
 
   )

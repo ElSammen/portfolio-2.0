@@ -137,12 +137,8 @@ a.navLink {
   display: block;
 }
 
-.cvEmbed {
-  display: flex;
-  place-content: center;
-  margin: 0 0 0 0;
-  width: 100vw;
-  height: 95vh;
+.cvImage {
+  height: auto;
 }
 
 .homePage {
@@ -370,6 +366,10 @@ a.navLink {
     position: relative;
     margin: auto;
   }
+  
+  .cvImage {
+    width: 90;
+  }
 }
 
 @media (min-width: 950px) {
@@ -392,6 +392,10 @@ a.navLink {
     position: absolute;
     right: 10%;
     top: 10%;
+  }
+  
+  .cvImage {
+    width: 48%;
   }
 }
 

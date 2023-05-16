@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Card } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import '../../App.scss'
 import Herdousel from './Herdousel'
 import Weathersel from './Weathersel'
 import R8sel from './R8sel'
 import Ponkercel from './Ponkercel'
-import Static from './Images/static.gif'
 import Sparesel from './Sparesel'
 
 function Projects() {
@@ -13,10 +12,17 @@ function Projects() {
 
 
   const [project, setProject] = useState('initial');
+  const [index, setIndex] = useState(0);
+
 
   const projectClick = (project) => {
     setProject(project);
+    setIndex(0);
   }
+
+
+
+
 
 
   return (
@@ -41,8 +47,15 @@ function Projects() {
         }
         {project === "herd" ? (
           <>
-            <h4>A full stack Spotify API powered music recommendation web app</h4>
-            <Herdousel />
+            <h4>Herd </h4>
+            <h5>A full stack Spotify API powered music recommendation web app</h5>
+            <div className="hostLinks"><a href="https://herd-frontend.onrender.com/login" target="_blank" className="hostLink">Live Site</a><a href="https://github.com/ElSammen/Herd" target="_blank" className="hostLink">Github Repo</a></div>
+            <Herdousel index={index} />
+            <div className="buttonBox">
+              {(index > 0) && (index < 4) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}
+              {(index === 0) || (index < 3) ? <div className='nextButton projectBtn' onClick={() => setIndex(index + 1)}>Next</div> : null}
+            </div>
+
           </>
 
         ) : null}
@@ -56,32 +69,36 @@ function Projects() {
 
         {project === "r8" ? (
           <>
-          <h4>A React dummy social media site allowing rating of posts</h4>
-          <R8sel /></>
+            <h4>A React dummy social media site allowing rating of posts</h4>
+            <R8sel /></>
         ) : null}
 
         {project === "ponker" ? (
           <>
-          <h4>Poker Pot Odds & Win percentage React App</h4>
-          <Ponkercel />
+            <h4>Poker Pot Odds & Win percentage React App</h4>
+            <Ponkercel />
           </>
         ) : null}
 
         {project === "sample" ? (
           <>
             <h4>Projects that didn't make the cut</h4>
-          <Sparesel />
+            <Sparesel />
           </>
         ) : null}
-
       </Container>
 
-      {project === "herd" || project === "weather" || project === "r8" || project === "ponker" ? (<div className="imgBox">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="JavaScript" className="homeBodyImg JSLogo" width="35px" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="Git" className="homeBodyImg" width="35px" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" alt="React" className="homeBodyImg" width="35px" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS" className="homeBodyImg" width="35px" />
-      </div>) : null
+      {project === "weather" || project === "r8" || project === "ponker" ? (
+        <>
+
+
+          <div className="imgBox">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="JavaScript" className="homeBodyImg JSLogo" width="35px" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="Git" className="homeBodyImg" width="35px" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" alt="React" className="homeBodyImg" width="35px" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS" className="homeBodyImg" width="35px" />
+          </div>
+        </>) : null
       }
 
       {project === "sample"

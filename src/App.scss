@@ -31,6 +31,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
+   
 }
 
 .intro1 {
@@ -66,8 +67,11 @@ body {
   }
 }
 
+.hostLink, .projectBtn {
+  margin: 0 0.3rem 0 0.3rem;
+}
 
-a.navLink {
+a.navLink, .hostLink {
   position: relative;
   color: $text;
   font-family: 'Spectral';
@@ -196,7 +200,9 @@ a.navLink {
   }
 }
 
-
+.cvImage {
+  height: auto;
+}
 
 .projectBody {
   display: flex;
@@ -206,13 +212,24 @@ a.navLink {
   margin: 0 0 0 0;
 }
 
+.projectImg {
+  margin: 0 0 0 0;
+  width: 85%;
+  height: auto;
+  border-radius: 2.5%;
+  border: 0.3rem solid rgba(253, 240, 213, 0.713);
+}
 
 
-
-.imgBox {
+.imgBox, .buttonBox {
   display: flex;
-  margin: 0.5rem auto auto auto;
+  margin: 0.5rem auto 0.5rem auto;
   place-content: center;
+}
+
+.buttonBox {
+  flex-direction: row;
+  margin: 0.6rem;
 }
 
 .displayNone {
@@ -261,11 +278,11 @@ a.navLink {
   }
 }
 
-.prevButton {
+.prevButtonCV {
   left: 20rem;
 }
 
-.nextButton {
+.nextButtonCV {
   right: 22rem;
 }
 
@@ -284,7 +301,13 @@ a.navLink {
   }
 }
 
+.projectSummary {
+  text-align: left;
+  margin: 0 0 0 0;
+}
+
 .carText {
+  margin: 0.5rem;
   text-align: center;
   font-size: 1.2rem;
   text-shadow: 1px 1px 1px black;
@@ -348,6 +371,15 @@ a.navLink {
     flex-wrap: wrap;
   }
 
+  .homeBody, .homeBody1 {
+    max-width: unset;
+    width: auto;
+  }
+
+  .cvImage {
+    width: 90%;
+  }
+
   .homeBody2 {
     position: relative;
     font-size: 1.1rem;
@@ -363,10 +395,12 @@ a.navLink {
   }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 900px) {
   .homePage {
     margin: 4rem 0 0 0;
   }
+
+  
 
   .homeBody2 {
     position: absolute;
@@ -383,5 +417,15 @@ a.navLink {
     position: absolute;
     right: 10%;
     top: 10%;
+  }
+
+  .cvImage {
+    width: 48%;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro {
+    font-size: 11vw;
   }
 }

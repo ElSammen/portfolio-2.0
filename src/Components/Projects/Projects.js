@@ -63,20 +63,36 @@ function Projects() {
         {project === "weather" ? (
           <>
             <h4>A React weather app using the OpenWeather API</h4>
-            <Weathersel />
+            <div className='hostLinks'>
+              <a href="https://elsammen.github.io/weather-api/#/days" target="_blank" className="hostLink">Live Site</a><a href="https://github.com/ElSammen/weather-api" target="_blank" className="hostLink">Github Repo</a>
+            </div>
+            <Weathersel index={index} />
+            <div className="buttonBox">
+              {(index > 0) && (index < 4) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}
+              {(index === 0) || (index < 3) ? <div className='nextButton projectBtn' onClick={() => setIndex(index + 1)}>Next</div> : null}
+            </div>
           </>
         ) : null}
 
         {project === "r8" ? (
           <>
             <h4>A React dummy social media site allowing rating of posts</h4>
-            <R8sel /></>
+            <R8sel index={index} />
+            <div className="buttonBox">
+            {(index > 0) && (index < 3) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}
+            {(index === 0) || (index < 2) ? <div className='nextButton projectBtn' onClick={() => setIndex(index + 1)}>Next</div> : null}
+            </div>
+          </>
         ) : null}
 
         {project === "ponker" ? (
           <>
             <h4>Poker Pot Odds & Win percentage React App</h4>
-            <Ponkercel />
+            <Ponkercel index={index}/>
+            <div className="buttonBox">
+            {(index > 0) && (index < 2) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}
+            {(index === 0) || (index < 1) ? <div className='nextButton projectBtn' onClick={() => setIndex(index + 1)}>Next</div> : null}
+            </div>
           </>
         ) : null}
 
@@ -87,19 +103,6 @@ function Projects() {
           </>
         ) : null}
       </Container>
-
-      {project === "weather" || project === "r8" || project === "ponker" ? (
-        <>
-
-
-          <div className="imgBox">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="JavaScript" className="homeBodyImg JSLogo" width="35px" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="Git" className="homeBodyImg" width="35px" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" alt="React" className="homeBodyImg" width="35px" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS" className="homeBodyImg" width="35px" />
-          </div>
-        </>) : null
-      }
 
       {project === "sample"
         ? (

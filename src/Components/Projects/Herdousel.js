@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import herdpic1 from './Images/herdpic1.png';
 import herdpic2 from './Images/herdpic2.png';
 import herdpic3 from './Images/herdpic3.png';

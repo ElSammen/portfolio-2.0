@@ -77,6 +77,9 @@ function Projects() {
         {project === "r8" ? (
           <>
             <h4>A React dummy social media site allowing rating of posts</h4>
+            <div className='hostLinks'>
+              <a href="https://jamesmdesign.github.io/rate-my/" target="_blank" className="hostLink">Live Site</a><a href="https://github.com/JamesMDesign/rate-my" target="_blank" className="hostLink">Github Repo</a>
+            </div>
             <R8sel index={index} />
             <div className="buttonBox">
             {(index > 0) && (index < 3) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}
@@ -88,6 +91,9 @@ function Projects() {
         {project === "ponker" ? (
           <>
             <h4>Poker Pot Odds & Win percentage React App</h4>
+            <div className='hostLinks'>
+              <p className="hostLink">Not currently live</p><a href="https://github.com/ElSammen/pot-odds" target="_blank" className="hostLink">Github Repo</a>
+            </div>
             <Ponkercel index={index}/>
             <div className="buttonBox">
             {(index > 0) && (index < 2) ? <div className='prevButton projectBtn' onClick={() => setIndex(index - 1)}>Previous</div> : null}

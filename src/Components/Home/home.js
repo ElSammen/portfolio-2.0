@@ -32,7 +32,7 @@ function home() {
             <div className="homeBody1TextBox">
               <p className="homeBody1Text">A recent fledgling from <em><a className="devAcadLink" href="https://thedeveloperacademy.com/">The Developer Academy</a></em>'s nest (Full Stack Software Developer bootcamp).
                 I'm looking to take my first steps into an exciting new industry and career.</p>
-              <p className="homeBody1Text">Currently actively jobseeking and going through the Full Stack Open curriculum.</p>
+              <p className="homeBody1Text">Currently actively jobseeking and going through CS50.</p>
               <p className="homeBody1Text">Check me out below or get in touch and lets see how we can help eachother.</p>
             </div>
             <div className="contactBox"></div>

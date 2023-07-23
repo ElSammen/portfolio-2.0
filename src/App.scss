@@ -1,6 +1,6 @@
-$background: #062863;
+$background: #032156;
 $backgroundhover: #669bbc;
-$text: rgb(253, 240, 213) !important;
+$text: #fdf0d5 !important;
 $texthover: #669bbc !important;
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spectral&display=swap');
 
@@ -10,6 +10,13 @@ $texthover: #669bbc !important;
   font-family: 'PT Serif', serif;
 }
 
+.accordion {
+  --bs-accordion-bg: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $backgroundhover !important;
+}
 
 body {
   background-color: $background !important;
@@ -35,7 +42,7 @@ body {
 }
 
 .intro1 {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 
 }
@@ -145,6 +152,7 @@ a.navLink, .hostLink {
   place-content: center;
   display: block;
   text-shadow: 1px 1px 1px black;
+  
 }
 
 .homeBody {
@@ -315,7 +323,7 @@ a.navLink, .hostLink {
 
 .projectViews {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   place-content: center;
   margin: 0.6rem 0 0 0;
@@ -325,6 +333,20 @@ a.navLink, .hostLink {
   min-height: auto;
 
 }
+
+.projectCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+  margin: 4rem 0 1rem 0;
+  padding: 0.2rem;
+  text-align: center;
+  min-width: 100vw;
+  min-height: auto;
+}
+
+
 
 
 
@@ -365,6 +387,15 @@ a.navLink, .hostLink {
   max-height: auto;
 }
 
+.logoBox {
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+
+
+
 @media (max-width: 800px) {
   .homeBody {
     flex-direction: column;
@@ -393,6 +424,25 @@ a.navLink, .hostLink {
     position: relative;
     margin: auto;
   }
+}
+
+.postsBody {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+
+.postBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+  margin: 3% auto;
+}
+
+.post-date {
+  text-align: center;
 }
 
 @media (min-width: 900px) {

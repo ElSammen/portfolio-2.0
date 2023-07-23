@@ -11,6 +11,7 @@ function CustomNavbar() {
         <Link className="navLink" to="/">Liam Salmon</Link>
         <Nav>
         <Link className="navLink" to="/projects">Projects</Link>
+        {/* <Link className="navLink" to="/posts">Thoughts</Link> */}
         <Link className="navLink" to="/CV">CV</Link>
         </Nav>
       </Container>
